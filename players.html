@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://pyscript.net/releases/2024.1.1/core.css">
+   <script type="module" src="https://pyscript.net/releases/2024.1.1/core.js"></script>
+
+
+<title>Intramurals Players</title>
+
+
+<style>
+
+
+/* GLOBAL */
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+html, body {
+  height: 100%;
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  padding-top: 80px;
+
+
+  background: linear-gradient(
+    90deg,
+    #ffd6d6,
+    #d6e0ff,
+    #d6ffe8,
+    #fff6cc
+  );
+
+
+  background-size: 400% 400%;
+  animation: softBlend 20s ease infinite;
+}
+
+
+/* BACKGROUND ANIMATION */
+
+
+@keyframes softBlend {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+/* NAVBAR */
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  background: linear-gradient(
+    270deg,
+    #ff0000,
+    #0055ff,
+    #2ecc71,
+    #ffd700
+  );
+
+
+  background-size: 600% 600%;
+  animation: gradientShift 12s ease infinite;
+
+
+  padding: 14px 28px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  z-index: 999;
+}
+
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
+.nav-brand {
+  font-size: 22px;
+  font-weight: 800;
+}
+
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 22px;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+
+.nav-links a:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+
+/* CARD */
+
+
+.card {
+  max-width: 420px;
+  margin: 40px auto;
+  background: white;
+  border-radius: 14px;
+  padding: 26px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+
+/* BUTTON */
+
+
+.gradient-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+
+
+  background: linear-gradient(
+    90deg,
+    red,
+    blue,
+    green,
+    yellow
+  );
+}
+
+
+/* PLAYER LIST */
+
+
+.players {
+  margin-top: 15px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* MOBILE */
+
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+
+  <nav class="navbar">
+  <div class="nav-brand">Intramurals</div>
+  <ul class="nav-links">
+    <li><a href="home.html">Home</a></li>
+    <li><a href="index.html">Teams</a></li>
+    <li><a href="players.html">Players</a></li>
+  </ul>
+</nav>
+
+
+
+
+<div class="card">
+
+
+<h3>Intramurals Players:</h3>
+
+
+<button class="gradient-btn">Click here</button>
+
+
+<div class="players">
+<ol>
+            <li>Abaca, Nathan</li>
+            <li>Alavado, Anthea</li>
+            <li>Ancheta, Maximus</li>
+            <li>Arenal, Maiah</li>
+            <li>Arevalo, Rihanna</li>
+            <li>Asuncion, Alonso</li>
+            <li>Atienza, Sebastian</li>
+            <li>Aventajado, Anxela</li>
+            <li>Battung, Lorenzo</li>
+            <li>Buenvenida, Victor</li>
+            <li>Buhain, Gabriella</li>
+            <li>Carpio, Julianne</li>
+            <li>Casul, Kayla</li>
+            <li>Catapang, Athena</li>
+            <li>Cenon, Caiomey</li>
+            <li>Chua, Cade</li>
+            <li>Cruz, Athena</li>
+            <li>Cubillas, Christian</li>
+            <li>David, Cassie</li>
+            <li>De Guzman, Stephanie</li>
+            <li>De La Paz, Joaquin</li>
+            <li>De Leon, Marcus</li>
+            <li>De Leon, Nikolo</li>
+            <li>De Luna, Andrew</li>
+            <li>De Peralta, Chelsea</li>
+            <li>Deinla, Rye</li>
+            <li>Del Barrio, Jercey</li>
+            <li>Dida-Agun, Sittie</li>
+            <li>Dumlao, Jarett</li>
+            <li>Elevazo, John Rony</li>
+            <li>Estapia, Jakob</li>
+            <li>Eusebio, Zyan</li>
+            <li>Evangelio, Radhika</li>
+            <li>Fado, Mara</li>
+            <li>Fermocil, Kleiser</li>
+            <li>Fernando, Curt</li>
+            <li>Francia, Ethan</li>
+            <li>Francisco, Amber</li>
+            <li>Galope, Chloe</li>
+            <li>Galura, Urielle</li>
+            <li>Ganal, Cheska</li>
+            <li>Guevarra, Aaron</li>
+            <li>Gurango, Gelo</li>
+            <li>Jimenez, Sophia</li>
+            <li>Lacerna, Atashya</li>
+            <li>Lavilla, Ava</li>
+            <li>Lazo, Ezra</li>
+            <li>Liwag, Jakob</li>
+            <li>Luna, Shantia</li>
+            <li>Mabilog, Javier</li>
+            <li>Mactal, Al Chrian</li>
+            <li>Magday, Soleil</li>
+            <li>Magpantay, Trisha</li>
+            <li>Morishita, John Ken</li>
+            <li>Moya, Yanna</li>
+            <li>Moyaen, Kaila</li>
+            <li>Mutia, Zoe</li>
+            <li>Nazareno, Luis</li>
+            <li>Ortega, Megan</li>
+            <li>Pangilinan, Noleen</li>
+            <li>Panuncialman, Xander</li>
+            <li>Prowel, Sam</li>
+            <li>Quinto, Arabella</li>
+            <li>Ramos, Pio</li>
+            <li>Romero, Inigo</li>
+            <li>Salonga, Carmen</li>
+            <li>Sannino, Katelyn</li>
+            <li>Santiaguel, Jasie</li>
+            <li>Santos, Kyler</li>
+            <li>Sarao, Jaedin</li>
+            <li>Solis, Brooke</li>
+            <li>Santa Maria, Gabe</li>
+            <li>Sy, Brianna</li>
+            <li>Sy, Charlotte</li>
+            <li>Tecson, Andrei</li>
+            <li>Tubangi, Yumi</li>
+            <li>Udono, Jared</li>
+            <li>Ulit, Hans</li>
+            <li>Urrutia, Lucas</li>
+            <li>Valeroso, Eyl</li>
+            <li>Vida, KC</li>
+            <li>Villanueva, Art</li>
+
+
+
+
+            
+
+        </ol>
+</div>
+
+
+</div>
+
+
+</body>
+</html>
+
+
